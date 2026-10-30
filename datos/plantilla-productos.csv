@@ -1,0 +1,8 @@
+id,nombre,descripcion,categoria,precio,descuento,imagen,estado,marca,tono,color,tamano,acabado
+1,Labial Mate Rojo,"Labial de larga duración, no se corre",Labiales,20000,0,img/labial-mate-rojo.jpg,activo,Marca X,Rojo pasión,Rojo,3.5 g,Mate
+2,Brillo Labial Transparente,Brillo hidratante para labios,Brillos para labios,15000,10,img/brillo-transparente.jpg,activo,,,Transparente,,Brillante
+3,Base Líquida,"Cobertura media, acabado natural",Bases,35000,0,img/base-liquida.jpg,activo,Marca Y,Beige,,30 ml,Natural
+4,Corrector,Cubre ojeras e imperfecciones,Correctores,18000,0,img/corrector.jpg,activo,,Medio,,,
+5,Paleta de Sombras,Paleta de 12 tonos,Sombras,45000,5,img/paleta-sombras.jpg,agotado,Marca X,,,,Satinado
+6,Kit de Brochas,Set de 10 brochas,Brochas,55000,0,img/kit-brochas.jpg,activo,,,,,
+7,Producto Oculto,Este no debe aparecer en la tienda,Accesorios,10000,0,,oculto,,,,,

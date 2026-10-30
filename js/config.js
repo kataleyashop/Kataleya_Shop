@@ -14,7 +14,7 @@ const CONFIG = {
   urlCatalogo: "ENLACE_CSV_PUBLICADO_DE_GOOGLE_SHEETS",
 
   // Número del cliente con código de país, sin "+" ni espacios. Ej: 573001234567
-  whatsappNumero: "57XXXXXXXXXX",
+  whatsappNumero: "573150570399",
 
   // Valor del domicilio por ciudad (en pesos)
   tarifasDomicilio: {

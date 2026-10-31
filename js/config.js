@@ -27,7 +27,7 @@ const CONFIG = {
   },
 
   // Formas de pago que se muestran en el carrito
-  formasPago: ["Pago directo", "Contraentrega"],
+  formasPago: ["Contraentrega","Nequi","Daviplata"],
 
   // Redes sociales: déjalas vacías ('') para que no se muestren
   redes: {

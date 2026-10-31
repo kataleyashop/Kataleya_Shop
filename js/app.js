@@ -126,7 +126,7 @@ function prepararTextosFijos() {
 // Llena el selector de ciudades y el de forma de pago
 function prepararSelectores() {
   const selectorCiudad = porId("ciudad-entrega");
-  const primera = crear("option", "", "Selecciona tu ciudad");
+  const primera = crear("option", "", "Selecciona tu barrio");
   primera.value = "";
   selectorCiudad.appendChild(primera);
   Object.keys(CONFIG.tarifasDomicilio).forEach(function (ciudad) {

@@ -5,11 +5,12 @@
 // (nunca innerHTML) para que un texto raro en la hoja no rompa la página.
 
 let productos = []; // lista completa de productos
-let categoriaActual = "Todas"; // filtro de categoría
-let textoBusqueda = ""; // texto del buscador
+let categoriaActual = 'Todas'; // filtro de categoría
+let textoBusqueda = ''; // texto del buscador
 let ordenActual = "az"; // tipo de orden
 let ciudadSeleccionada = ""; // ciudad de entrega elegida
 let productoEnFicha = null; // producto abierto en la ficha
+
 
 // Imagen de reemplazo (un cuadro rosado) si la foto no existe o no carga
 const IMAGEN_REEMPLAZO =
@@ -20,6 +21,23 @@ const IMAGEN_REEMPLAZO =
       '<text x="100" y="115" font-size="64" text-anchor="middle" fill="#b8305f" font-family="Georgia,serif">K</text>' +
       "</svg>",
   );
+
+// Convierte un enlace de Google Drive en una imagen que se puede mostrar.
+// Si el enlace no es de Drive, lo deja igual (rutas como img/labial.jpg o URLs normales).
+function obtenerUrlImagen(enlace) {
+  if (!enlace) return ""; // sin foto: más abajo se usa IMAGEN_REEMPLAZO
+
+  const coincidencia =
+    enlace.match(/\/d\/([a-zA-Z0-9_-]+)/) ||
+    enlace.match(/[?&]id=([a-zA-Z0-9_-]+)/);
+
+  if (enlace.includes("drive.google.com") && coincidencia) {
+    return (
+      "https://drive.google.com/thumbnail?id=" + coincidencia[1] + "&sz=w800"
+    );
+  }
+  return enlace;
+}
 
 // ---------- Utilidades ----------
 
@@ -37,7 +55,7 @@ function crear(etiqueta, clase, texto) {
 
 function crearImagen(url, texto) {
   const img = document.createElement("img");
-  img.src = url || IMAGEN_REEMPLAZO;
+  img.src = obtenerUrlImagen(url) || IMAGEN_REEMPLAZO;
   img.alt = texto || "";
   img.loading = "lazy";
   img.onerror = function () {
@@ -289,7 +307,7 @@ function abrirFicha(producto) {
     imagen.onerror = null;
     imagen.src = IMAGEN_REEMPLAZO;
   };
-  imagen.src = producto.imagen || IMAGEN_REEMPLAZO;
+  imagen.src = obtenerUrlImagen(producto.imagen) || IMAGEN_REEMPLAZO;
   imagen.alt = producto.nombre;
 
   porId("ficha-categoria").textContent = producto.categoria;

@@ -19,11 +19,11 @@ const CONFIG = {
 
   // Valor del domicilio por ciudad (en pesos)
   tarifasDomicilio: {
-    La paz: 4000,
-    El tiburon: 10000,
-    ciudadela: 10000,
-    triangulo: 12000,
-    centro: 12000,
+    "La paz": 4000,
+    "El tiburon": 10000,
+    "ciudadela": 10000,
+    "triangulo": 12000,
+    "centro": 12000,
   },
 
   // Formas de pago que se muestran en el carrito

@@ -12,7 +12,7 @@ const CONFIG = {
   // Pega aquí el enlace CSV publicado de tu hoja de Google Sheets.
   // Mientras tenga el texto de ejemplo, la tienda usa datos/plantilla-productos.csv
   urlCatalogo:
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vTAjOkaOJVdaRl3SBEMMTvNeSWKbZzefFpFUAeIKaujDh_ypDZm86j5IYQf_D3cxnQr1GwpGX9yeZ7p/pubhtml",
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vTAjOkaOJVdaRl3SBEMMTvNeSWKbZzefFpFUAeIKaujDh_ypDZm86j5IYQf_D3cxnQr1GwpGX9yeZ7p/pub?output=csv",
 
   // Número del cliente con código de país, sin "+" ni espacios. Ej: 573001234567
   whatsappNumero: "573150570399",

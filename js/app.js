@@ -5,12 +5,11 @@
 // (nunca innerHTML) para que un texto raro en la hoja no rompa la página.
 
 let productos = []; // lista completa de productos
-let categoriaActual = 'Todas'; // filtro de categoría
-let textoBusqueda = ''; // texto del buscador
+let categoriaActual = "Todas"; // filtro de categoría
+let textoBusqueda = ""; // texto del buscador
 let ordenActual = "az"; // tipo de orden
 let ciudadSeleccionada = ""; // ciudad de entrega elegida
 let productoEnFicha = null; // producto abierto en la ficha
-
 
 // Imagen de reemplazo (un cuadro rosado) si la foto no existe o no carga
 const IMAGEN_REEMPLAZO =
